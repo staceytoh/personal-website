@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Personal Website</title>
+    <script src="https://kit.fontawesome.com/b1162b4a8f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about">01. About</a></li>
+            <li><a href="#projects">02. Projects</a></li>
+            <li><a href="#work">03. Work</a></li>
+            <li><a href="#contact">04. Contact</a></li>
+            <a href="resume.pdf" download class="resume-button btn btn2">Download Resume</a> 
+        </ul>
+    </nav>
+    
+    <section class="hero">
+        <div class="intro-text">
+            <p class="greeting">Hi, my name is</p>
+            <h1>Stacey Toh.</h1>
+            <h2>I love exploring new places and trying out new things.</h2>
+            <p class="description">
+                I'm a student studying EECS in UC Berkeley. I'm passionate about creating technology that solves
+                real world problems and help people in meaningful ways.
+            </p>
+            <a href="#projects" class="cta-button">Check out my projects!</a>
+        </div>
+
+        <div class="profile-image">
+            <img src="profilepic.JPG" alt="Your Face">
+        </div>
+    </section>
+
+    
+
+    <div id = "about">
+        <div class ="container">
+            <div class = "row">
+                <div class = "about-col-1">
+                    <img src = "secondprofpic.jpg">
+                </div>
+                <div class = "about-col-2">
+                    <h1 class="about-me-subtitle"> About Me</h1>
+                    <p class="about-me-description">
+                        I'm an adventurous soul from Indonesia who loves exploring new things and embracing 
+                        new experiences. Whether it's going out with friends, trying out new sports, or diving 
+                        into creative coding projects, I’m always eager to learn and have fun. I enjoy experimenting 
+                        with Arduino, which lets me merge creativity with technology. My passion for discovering and 
+                        creating drives me to constantly seek out new challenges and opportunities.
+                    </p>
+                    <div class = "tab-titles">
+                        <p class = "tab-links active-link" onclick ="opentab('skills')">Skills</p>
+                        <p class = "tab-links" onclick ="opentab('experience')">Experience</p>
+                        <p class = "tab-links" onclick ="opentab('education')">Education</p>
+                        <p class = "tab-links" onclick ="opentab('hobbies')">Hobbies </p>
+                    </div>
+                    <div class = "tab-contents active-tab" id = "skills" >
+                        <ul>
+                            <li><span>UI UX</span><br>Designing web interface</li>
+                            <li><span>Game development</span><br>Creating interacive games</li>
+                            <li><span>Trilingual</span><br>Indonesian, Mandarin, English</li>
+                        </ul>
+                    </div>
+
+                    <div class = "tab-contents" id = "experience">
+                        <ul>
+                            <li><span>May 2021-July 2021</span><br>Website Developer at PT Asiapacific True Trust</li>
+                            <li><span>December 2022-May 2023-</span><br>Mathematics Tutor at Pasadena City College</li>
+                            <li><span>February 2023-May 2023</span><br>Research Fellow at Caltech University</li>
+                            <li><span>June 2024-August 2024</span><br>Machine Learning Engineer at ClinicianAI</li>
+
+                        </ul>
+                    </div>
+
+                    <div class = "tab-contents" id = "education">
+                        <ul>
+                            <li><span>2017-2021</span><br>Bina Bangsa School PIK, Indonesia</li>
+                            <li><span>2021-2023</span><br>Pasadena City College</li>
+                            <li><span>2023-2025</span><br>Univeristy of California, Berkeley</li>
+                        </ul>
+                    </div>
+
+                    <div class = "tab-contents" id = "hobbies">
+                        <ul>
+                            <li><span>Wakeboarding</span></li>
+                            <li><span>Binge watching netflix series</span></li>
+                            <li><span>Baking and trying out new recipes</span></li>
+                        </ul>
+                    </div>
+                    
+                 </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) 
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link")
+            }
+
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab")
+            }
+
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+
+
+
+
+
+<!----- projects-->
+
+<div id = "projects">
+    <div class = "container">
+        <h1 class = "sub-title"> My Projects</h1>
+        <div class = "projects-list">
+            <div>
+                <i class="fa-solid fa-car"></i>
+                <h3>Self-driving car</h3>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua.” The purpose of lorem ipsum is to create a natural looking
+                    block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout.</p>
+                <div class="project-image">
+                    <img src="car.webp" alt="Your Face">
+                </div>
+                <a href = "#" class="learn-more"> learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-ghost"></i>
+                <h3>Pacman Game</h3>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua.” The purpose of lorem ipsum is to create a natural looking
+                    block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout.</p>
+                <div class="project-image">
+                    <img src="pacman.webp" alt="Your Face">
+                </div>
+                <a href = "#" class="learn-more"> learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-chart-simple"></i>
+                <h3>Graphing calculator</h3>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua.” The purpose of lorem ipsum is to create a natural looking
+                    block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout.</p>
+                <div class="project-image">
+                    <img src="graphingcalculator.webp" alt="Your Face">
+                </div>
+                <a href = "#" class="learn-more"> learn more</a>
+            </div>
+
+            
+
+        </div>
+    </div>
+</div>
+
+<div id = "contact">
+    <div class=""container>
+        <div class ="row">
+            <div class = "contact-left">
+                <h1 class = "sub-title">Contact Me</h1>
+                <p> <i class="fa-regular fa-paper-plane"></i>stoh1@berkeley.edu</p>
+                <p><i class="fa-solid fa-phone"></i>6265585452</p>
+                <div class = "social-icons">
+                    <a href="https://www.linkedin.com/in/stacey-toh-024262242"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/staceytoh?tab=repositories"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/stacey.toh/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+
+                </div>
+
+            </div>
+            <div class = "contact-right">
+                <form>
+                    <input type = "text" name = "Name" placeholder="Your Name" required>
+                    <input type = "email" name = "email" placeholder="Your Email" required>
+                    <textarea name = "Message" rows = "6" placeholder = "Your Message"></textarea>
+                    <button type = "Submit" class="btn btn2"> Submit</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <footer>
+        <p class="email">stoh1@berkeley.edu</p>
+    </footer>
+
+
+</body>
+</html>
